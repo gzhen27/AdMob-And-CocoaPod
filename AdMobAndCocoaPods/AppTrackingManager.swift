@@ -34,13 +34,14 @@ struct AppTrackingManager {
         switch status {
         case .authorized:
             let id = AppTrackingManager.getIDFA()
-            print("G - \(id)")
+            print("G - The tracking status is authorized")
+            print("G - The advertising identifier is \(id)")
         case .notDetermined:
-            print("G - notDetermined")
+            print("G - The tracking status is notDetermined")
         case .denied:
-            print("G - denied")
+            print("G - The tracking status is denied")
         case .restricted:
-            print("G - restricted")
+            print("G - The tracking status is restricted")
         @unknown default:
             break
         }

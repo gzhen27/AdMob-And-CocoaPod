@@ -6,9 +6,18 @@
 //
 
 import SwiftUI
+import GoogleMobileAds
 
 @main
 struct AdMobAndCocoaPodsApp: App {
+    
+    // uses init() instead of ApplicationDidFinishLaunchWithOptions
+    init() {
+        // initialize the Mobile Ads SDK
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        print("G - The Mobile Ads SDK is initialized")
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
