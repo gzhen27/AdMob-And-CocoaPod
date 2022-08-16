@@ -23,6 +23,7 @@
 		EBA9964228ABE4D600745292 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EBA9964428ABE4DD00745292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBA9964728ABE4DD00745292 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EBA9964E28ABE9EA00745292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +44,6 @@
 				72005394AE9F9D8A166FC26C /* Pods-AdMobAndCocoaPods.debug.xcconfig */,
 				D4D865640CA7FE76436F5F64 /* Pods-AdMobAndCocoaPods.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -76,6 +76,7 @@
 		EBA9963F28ABE4D600745292 /* AdMobAndCocoaPods */ = {
 			isa = PBXGroup;
 			children = (
+				EBA9964E28ABE9EA00745292 /* Info.plist */,
 				EBA9964028ABE4D600745292 /* AdMobAndCocoaPodsApp.swift */,
 				EBA9964228ABE4D600745292 /* ContentView.swift */,
 				EBA9964428ABE4DD00745292 /* Assets.xcassets */,
@@ -340,6 +341,7 @@
 				DEVELOPMENT_TEAM = THQHXZM7R8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AdMobAndCocoaPods/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -370,6 +372,7 @@
 				DEVELOPMENT_TEAM = THQHXZM7R8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AdMobAndCocoaPods/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
