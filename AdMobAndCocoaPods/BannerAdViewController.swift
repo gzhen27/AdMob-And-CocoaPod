@@ -48,6 +48,8 @@ class BannerAdViewController: UIViewController {
         // for more detail: https://developers.google.com/admob/ios/banner/anchored-adaptive
         bannerView.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(width)
         
-        bannerView.load(GADRequest())
+        let request = GADRequest()
+        request.scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        bannerView.load(request)
     }
 }
