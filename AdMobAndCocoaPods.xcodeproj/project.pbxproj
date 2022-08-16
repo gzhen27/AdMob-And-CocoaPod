@@ -14,6 +14,7 @@
 		EBA9965028AC09F200745292 /* AppTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9964F28AC09F200745292 /* AppTrackingManager.swift */; };
 		EBA9965228AC447900745292 /* BannerAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9965128AC447900745292 /* BannerAdViewController.swift */; };
 		EBA9965428AC499400745292 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9965328AC499400745292 /* BannerAdView.swift */; };
+		EBA9965628AC522500745292 /* BannerAdUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9965528AC522500745292 /* BannerAdUI.swift */; };
 		F21C75B2AE9DB69FDC257752 /* Pods_AdMobAndCocoaPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB77568377F1F2912D54192 /* Pods_AdMobAndCocoaPods.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		EBA9964F28AC09F200745292 /* AppTrackingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTrackingManager.swift; sourceTree = "<group>"; };
 		EBA9965128AC447900745292 /* BannerAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdViewController.swift; sourceTree = "<group>"; };
 		EBA9965328AC499400745292 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		EBA9965528AC522500745292 /* BannerAdUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,8 +87,9 @@
 				EBA9964028ABE4D600745292 /* AdMobAndCocoaPodsApp.swift */,
 				EBA9964F28AC09F200745292 /* AppTrackingManager.swift */,
 				EBA9964428ABE4DD00745292 /* Assets.xcassets */,
-				EBA9965128AC447900745292 /* BannerAdViewController.swift */,
+				EBA9965528AC522500745292 /* BannerAdUI.swift */,
 				EBA9965328AC499400745292 /* BannerAdView.swift */,
+				EBA9965128AC447900745292 /* BannerAdViewController.swift */,
 				EBA9964228ABE4D600745292 /* ContentView.swift */,
 				EBA9964E28ABE9EA00745292 /* Info.plist */,
 				EBA9964628ABE4DD00745292 /* Preview Content */,
@@ -220,6 +223,7 @@
 				EBA9965028AC09F200745292 /* AppTrackingManager.swift in Sources */,
 				EBA9965228AC447900745292 /* BannerAdViewController.swift in Sources */,
 				EBA9964328ABE4D600745292 /* ContentView.swift in Sources */,
+				EBA9965628AC522500745292 /* BannerAdUI.swift in Sources */,
 				EBA9964128ABE4D600745292 /* AdMobAndCocoaPodsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
