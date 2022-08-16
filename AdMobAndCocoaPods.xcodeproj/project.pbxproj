@@ -11,9 +11,13 @@
 		EBA9964328ABE4D600745292 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9964228ABE4D600745292 /* ContentView.swift */; };
 		EBA9964528ABE4DD00745292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA9964428ABE4DD00745292 /* Assets.xcassets */; };
 		EBA9964828ABE4DD00745292 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA9964728ABE4DD00745292 /* Preview Assets.xcassets */; };
+		F21C75B2AE9DB69FDC257752 /* Pods_AdMobAndCocoaPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB77568377F1F2912D54192 /* Pods_AdMobAndCocoaPods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6EB77568377F1F2912D54192 /* Pods_AdMobAndCocoaPods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AdMobAndCocoaPods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72005394AE9F9D8A166FC26C /* Pods-AdMobAndCocoaPods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdMobAndCocoaPods.debug.xcconfig"; path = "Target Support Files/Pods-AdMobAndCocoaPods/Pods-AdMobAndCocoaPods.debug.xcconfig"; sourceTree = "<group>"; };
+		D4D865640CA7FE76436F5F64 /* Pods-AdMobAndCocoaPods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdMobAndCocoaPods.release.xcconfig"; path = "Target Support Files/Pods-AdMobAndCocoaPods/Pods-AdMobAndCocoaPods.release.xcconfig"; sourceTree = "<group>"; };
 		EBA9963D28ABE4D600745292 /* AdMobAndCocoaPods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdMobAndCocoaPods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA9964028ABE4D600745292 /* AdMobAndCocoaPodsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobAndCocoaPodsApp.swift; sourceTree = "<group>"; };
 		EBA9964228ABE4D600745292 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,17 +30,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21C75B2AE9DB69FDC257752 /* Pods_AdMobAndCocoaPods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44C16AE11E491A4819E24718 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72005394AE9F9D8A166FC26C /* Pods-AdMobAndCocoaPods.debug.xcconfig */,
+				D4D865640CA7FE76436F5F64 /* Pods-AdMobAndCocoaPods.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		74F18955ECB4A00A589F18DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EB77568377F1F2912D54192 /* Pods_AdMobAndCocoaPods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EBA9963428ABE4D600745292 = {
 			isa = PBXGroup;
 			children = (
 				EBA9963F28ABE4D600745292 /* AdMobAndCocoaPods */,
 				EBA9963E28ABE4D600745292 /* Products */,
+				44C16AE11E491A4819E24718 /* Pods */,
+				74F18955ECB4A00A589F18DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBA9964B28ABE4DD00745292 /* Build configuration list for PBXNativeTarget "AdMobAndCocoaPods" */;
 			buildPhases = (
+				082E9C9BAE68B75ADF7EC4DF /* [CP] Check Pods Manifest.lock */,
 				EBA9963928ABE4D600745292 /* Sources */,
 				EBA9963A28ABE4D600745292 /* Frameworks */,
 				EBA9963B28ABE4D600745292 /* Resources */,
+				7647C677B0F645F4E05FF9F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		082E9C9BAE68B75ADF7EC4DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AdMobAndCocoaPods-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7647C677B0F645F4E05FF9F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdMobAndCocoaPods/Pods-AdMobAndCocoaPods-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AdMobAndCocoaPods/Pods-AdMobAndCocoaPods-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdMobAndCocoaPods/Pods-AdMobAndCocoaPods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EBA9963928ABE4D600745292 /* Sources */ = {
@@ -261,6 +330,7 @@
 		};
 		EBA9964C28ABE4DD00745292 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72005394AE9F9D8A166FC26C /* Pods-AdMobAndCocoaPods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,6 +360,7 @@
 		};
 		EBA9964D28ABE4DD00745292 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4D865640CA7FE76436F5F64 /* Pods-AdMobAndCocoaPods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
