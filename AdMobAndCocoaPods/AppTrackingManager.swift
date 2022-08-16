@@ -27,6 +27,23 @@ struct AppTrackingManager {
         }
     }
     
-    
+    /**
+     logs the tracking authorization statu
+     */
+    static func logTrackingInfo(status: ATTrackingManager.AuthorizationStatus) {
+        switch status {
+        case .authorized:
+            let id = AppTrackingManager.getIDFA()
+            print("G - \(id)")
+        case .notDetermined:
+            print("G - notDetermined")
+        case .denied:
+            print("G - denied")
+        case .restricted:
+            print("G - restricted")
+        @unknown default:
+            break
+        }
+    }
     
 }
