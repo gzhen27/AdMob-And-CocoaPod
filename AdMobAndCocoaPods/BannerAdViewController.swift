@@ -37,7 +37,7 @@ class BannerAdViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        
+        loadAd()
     }
     
     private func loadAd() {
