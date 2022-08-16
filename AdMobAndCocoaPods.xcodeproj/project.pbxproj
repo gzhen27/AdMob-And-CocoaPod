@@ -11,6 +11,7 @@
 		EBA9964328ABE4D600745292 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9964228ABE4D600745292 /* ContentView.swift */; };
 		EBA9964528ABE4DD00745292 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA9964428ABE4DD00745292 /* Assets.xcassets */; };
 		EBA9964828ABE4DD00745292 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA9964728ABE4DD00745292 /* Preview Assets.xcassets */; };
+		EBA9965028AC09F200745292 /* AppTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9964F28AC09F200745292 /* AppTrackingManager.swift */; };
 		F21C75B2AE9DB69FDC257752 /* Pods_AdMobAndCocoaPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB77568377F1F2912D54192 /* Pods_AdMobAndCocoaPods.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		EBA9964428ABE4DD00745292 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBA9964728ABE4DD00745292 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EBA9964E28ABE9EA00745292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EBA9964F28AC09F200745292 /* AppTrackingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTrackingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +78,11 @@
 		EBA9963F28ABE4D600745292 /* AdMobAndCocoaPods */ = {
 			isa = PBXGroup;
 			children = (
-				EBA9964E28ABE9EA00745292 /* Info.plist */,
 				EBA9964028ABE4D600745292 /* AdMobAndCocoaPodsApp.swift */,
-				EBA9964228ABE4D600745292 /* ContentView.swift */,
+				EBA9964F28AC09F200745292 /* AppTrackingManager.swift */,
 				EBA9964428ABE4DD00745292 /* Assets.xcassets */,
+				EBA9964228ABE4D600745292 /* ContentView.swift */,
+				EBA9964E28ABE9EA00745292 /* Info.plist */,
 				EBA9964628ABE4DD00745292 /* Preview Content */,
 			);
 			path = AdMobAndCocoaPods;
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBA9965028AC09F200745292 /* AppTrackingManager.swift in Sources */,
 				EBA9964328ABE4D600745292 /* ContentView.swift in Sources */,
 				EBA9964128ABE4D600745292 /* AdMobAndCocoaPodsApp.swift in Sources */,
 			);
@@ -342,6 +346,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AdMobAndCocoaPods/Info.plist;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "We need to track the usage in order provide better content.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -373,6 +378,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AdMobAndCocoaPods/Info.plist;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "We need to track the usage in order provide better content.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
