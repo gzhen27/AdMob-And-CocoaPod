@@ -15,6 +15,7 @@
 		EBA9965228AC447900745292 /* BannerAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9965128AC447900745292 /* BannerAdViewController.swift */; };
 		EBA9965428AC499400745292 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9965328AC499400745292 /* BannerAdView.swift */; };
 		EBA9965628AC522500745292 /* BannerAdUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9965528AC522500745292 /* BannerAdUI.swift */; };
+		EBDFFFDB28ADADC40061D342 /* DeviceTypeAndOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFFFDA28ADADC40061D342 /* DeviceTypeAndOrientation.swift */; };
 		F21C75B2AE9DB69FDC257752 /* Pods_AdMobAndCocoaPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB77568377F1F2912D54192 /* Pods_AdMobAndCocoaPods.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		EBA9965128AC447900745292 /* BannerAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdViewController.swift; sourceTree = "<group>"; };
 		EBA9965328AC499400745292 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		EBA9965528AC522500745292 /* BannerAdUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdUI.swift; sourceTree = "<group>"; };
+		EBDFFFDA28ADADC40061D342 /* DeviceTypeAndOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTypeAndOrientation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				EBA9965328AC499400745292 /* BannerAdView.swift */,
 				EBA9965128AC447900745292 /* BannerAdViewController.swift */,
 				EBA9964228ABE4D600745292 /* ContentView.swift */,
+				EBDFFFDA28ADADC40061D342 /* DeviceTypeAndOrientation.swift */,
 				EBA9964E28ABE9EA00745292 /* Info.plist */,
 				EBA9964628ABE4DD00745292 /* Preview Content */,
 			);
@@ -219,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDFFFDB28ADADC40061D342 /* DeviceTypeAndOrientation.swift in Sources */,
 				EBA9965428AC499400745292 /* BannerAdView.swift in Sources */,
 				EBA9965028AC09F200745292 /* AppTrackingManager.swift in Sources */,
 				EBA9965228AC447900745292 /* BannerAdViewController.swift in Sources */,
