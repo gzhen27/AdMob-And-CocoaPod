@@ -17,26 +17,11 @@ struct BannerAdUI: View {
             BannerAdView(adUnitID: adUnitID)
                 .frame(width: adSize.width, height: adSize.height)
                 .onAppear {
-                    updateFrame()
+                    adSize = getBannerAdSize()
                 }
                 .onReceive(NotificationCenter.default.publisher(for: UIDevice.orientationDidChangeNotification)) { _ in
-                    updateFrame()
+                    adSize = getBannerAdSize()
                 }
-        }
-    }
-
-    private func updateFrame() {
-        let deviceTypeAndOrientation = DeviceTypeAndOrientation.get()
-        
-        // when the device is iPhone and on Portrait mode, set the size to GADAdSizeBanner.size(320x50)
-        // when on iPhone Landscape or iPad, set the size to GADAdSizeLeader.board.size(728x90)
-        switch deviceTypeAndOrientation {
-        case .iPhonePortrait, .iPhoneLandscape, .iPhoneUnknown:
-            adSize = GADAdSizeBanner.size
-        case .iPadPortrait, .iPadLandscape, .iPadUnknown:
-            adSize = GADAdSizeLeaderboard.size
-        case .unknown:
-            adSize = GADAdSizeBanner.size
         }
     }
 }

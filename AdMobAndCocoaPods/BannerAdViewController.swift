@@ -42,18 +42,8 @@ class BannerAdViewController: UIViewController {
     }
     
     private func loadAd() {
-        let deviceTypeAndOrientation = DeviceTypeAndOrientation.get()
-        
-        // when the device is iPhone and on Portrait mode, set the size to GADAdSizeBanner.size(320x50)
-        // when on iPhone Landscape or iPad, set the size to GADAdSizeLeader.board.size(728x90)
-        switch deviceTypeAndOrientation {
-        case .iPhonePortrait, .iPhoneLandscape, .iPhoneUnknown:
-            bannerView.adSize = GADAdSizeBanner
-        case .iPadPortrait, .iPadLandscape, .iPadUnknown:
-            bannerView.adSize = GADAdSizeLeaderboard
-        case .unknown:
-            bannerView.adSize = GADAdSizeBanner
-        }
+        let desiredAdSize = getBannerAdSize()
+        bannerView.adSize = GADAdSizeFromCGSize(desiredAdSize)
         
         let request = GADRequest()
         request.scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
