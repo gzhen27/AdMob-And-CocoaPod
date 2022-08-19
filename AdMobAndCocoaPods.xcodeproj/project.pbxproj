@@ -15,6 +15,7 @@
 		EBA9965228AC447900745292 /* BannerAdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9965128AC447900745292 /* BannerAdViewController.swift */; };
 		EBA9965428AC499400745292 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9965328AC499400745292 /* BannerAdView.swift */; };
 		EBA9965628AC522500745292 /* BannerAdUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9965528AC522500745292 /* BannerAdUI.swift */; };
+		EBB7128528B017CB008129FC /* InterstitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7128428B017CB008129FC /* InterstitialAd.swift */; };
 		EBDFFFDB28ADADC40061D342 /* DeviceTypeAndOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFFFDA28ADADC40061D342 /* DeviceTypeAndOrientation.swift */; };
 		EBDFFFDD28ADC0000061D342 /* AdsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFFFDC28ADC0000061D342 /* AdsHelper.swift */; };
 		F21C75B2AE9DB69FDC257752 /* Pods_AdMobAndCocoaPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB77568377F1F2912D54192 /* Pods_AdMobAndCocoaPods.framework */; };
@@ -34,6 +35,7 @@
 		EBA9965128AC447900745292 /* BannerAdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdViewController.swift; sourceTree = "<group>"; };
 		EBA9965328AC499400745292 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		EBA9965528AC522500745292 /* BannerAdUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdUI.swift; sourceTree = "<group>"; };
+		EBB7128428B017CB008129FC /* InterstitialAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAd.swift; sourceTree = "<group>"; };
 		EBDFFFDA28ADADC40061D342 /* DeviceTypeAndOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTypeAndOrientation.swift; sourceTree = "<group>"; };
 		EBDFFFDC28ADC0000061D342 /* AdsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,12 +94,11 @@
 				EBDFFFDC28ADC0000061D342 /* AdsHelper.swift */,
 				EBA9964F28AC09F200745292 /* AppTrackingManager.swift */,
 				EBA9964428ABE4DD00745292 /* Assets.xcassets */,
-				EBA9965528AC522500745292 /* BannerAdUI.swift */,
-				EBA9965328AC499400745292 /* BannerAdView.swift */,
-				EBA9965128AC447900745292 /* BannerAdViewController.swift */,
+				EBB7128228B01656008129FC /* BannerAd */,
 				EBA9964228ABE4D600745292 /* ContentView.swift */,
 				EBDFFFDA28ADADC40061D342 /* DeviceTypeAndOrientation.swift */,
 				EBA9964E28ABE9EA00745292 /* Info.plist */,
+				EBB7128328B017B5008129FC /* InterstitialAd */,
 				EBA9964628ABE4DD00745292 /* Preview Content */,
 			);
 			path = AdMobAndCocoaPods;
@@ -109,6 +110,24 @@
 				EBA9964728ABE4DD00745292 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EBB7128228B01656008129FC /* BannerAd */ = {
+			isa = PBXGroup;
+			children = (
+				EBA9965528AC522500745292 /* BannerAdUI.swift */,
+				EBA9965328AC499400745292 /* BannerAdView.swift */,
+				EBA9965128AC447900745292 /* BannerAdViewController.swift */,
+			);
+			path = BannerAd;
+			sourceTree = "<group>";
+		};
+		EBB7128328B017B5008129FC /* InterstitialAd */ = {
+			isa = PBXGroup;
+			children = (
+				EBB7128428B017CB008129FC /* InterstitialAd.swift */,
+			);
+			path = InterstitialAd;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +248,7 @@
 				EBA9965428AC499400745292 /* BannerAdView.swift in Sources */,
 				EBDFFFDD28ADC0000061D342 /* AdsHelper.swift in Sources */,
 				EBA9965028AC09F200745292 /* AppTrackingManager.swift in Sources */,
+				EBB7128528B017CB008129FC /* InterstitialAd.swift in Sources */,
 				EBA9965228AC447900745292 /* BannerAdViewController.swift in Sources */,
 				EBA9964328ABE4D600745292 /* ContentView.swift in Sources */,
 				EBA9965628AC522500745292 /* BannerAdUI.swift in Sources */,
