@@ -6,3 +6,22 @@
 //
 
 import Foundation
+import GoogleMobileAds
+
+class InterstitialAd: NSObject {
+    var interstitialAd: GADInterstitialAd?
+    
+    static let shared = InterstitialAd()
+    
+    func load(withAdUnitID id: String) {
+        let req = GADRequest()
+        GADInterstitialAd.load(withAdUnitID: id, request: req) { ad, err in
+            if let err = err {
+                print("Failed to load interstitial ad with error: \(err.localizedDescription)")
+                return
+            }
+            
+            self.interstitialAd = ad
+        }
+    }
+}

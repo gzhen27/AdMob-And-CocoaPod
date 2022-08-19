@@ -16,6 +16,7 @@
 		EBA9965428AC499400745292 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9965328AC499400745292 /* BannerAdView.swift */; };
 		EBA9965628AC522500745292 /* BannerAdUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA9965528AC522500745292 /* BannerAdUI.swift */; };
 		EBB7128528B017CB008129FC /* InterstitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7128428B017CB008129FC /* InterstitialAd.swift */; };
+		EBB7128728B032EF008129FC /* InterstitialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7128628B032EF008129FC /* InterstitialAdView.swift */; };
 		EBDFFFDB28ADADC40061D342 /* DeviceTypeAndOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFFFDA28ADADC40061D342 /* DeviceTypeAndOrientation.swift */; };
 		EBDFFFDD28ADC0000061D342 /* AdsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFFFDC28ADC0000061D342 /* AdsHelper.swift */; };
 		F21C75B2AE9DB69FDC257752 /* Pods_AdMobAndCocoaPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB77568377F1F2912D54192 /* Pods_AdMobAndCocoaPods.framework */; };
@@ -36,6 +37,7 @@
 		EBA9965328AC499400745292 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		EBA9965528AC522500745292 /* BannerAdUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdUI.swift; sourceTree = "<group>"; };
 		EBB7128428B017CB008129FC /* InterstitialAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAd.swift; sourceTree = "<group>"; };
+		EBB7128628B032EF008129FC /* InterstitialAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdView.swift; sourceTree = "<group>"; };
 		EBDFFFDA28ADADC40061D342 /* DeviceTypeAndOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTypeAndOrientation.swift; sourceTree = "<group>"; };
 		EBDFFFDC28ADC0000061D342 /* AdsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB7128428B017CB008129FC /* InterstitialAd.swift */,
+				EBB7128628B032EF008129FC /* InterstitialAdView.swift */,
 			);
 			path = InterstitialAd;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				EBB7128528B017CB008129FC /* InterstitialAd.swift in Sources */,
 				EBA9965228AC447900745292 /* BannerAdViewController.swift in Sources */,
 				EBA9964328ABE4D600745292 /* ContentView.swift in Sources */,
+				EBB7128728B032EF008129FC /* InterstitialAdView.swift in Sources */,
 				EBA9965628AC522500745292 /* BannerAdUI.swift in Sources */,
 				EBA9964128ABE4D600745292 /* AdMobAndCocoaPodsApp.swift in Sources */,
 			);

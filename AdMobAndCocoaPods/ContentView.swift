@@ -11,6 +11,7 @@ struct ContentView: View {
     // always uses google test ads for testing
     // for more test ads: https://developers.google.com/admob/ios/test-ads
     let bannerAdUnitID = "ca-app-pub-3940256099942544/2934735716"
+    let interstitialAdUnitID = "ca-app-pub-3940256099942544/4411468910"
 
     var body: some View {
         VStack() {
