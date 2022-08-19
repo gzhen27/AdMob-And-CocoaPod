@@ -18,12 +18,16 @@ final class InterstitialAdView: NSObject, UIViewControllerRepresentable, GADFull
         self._isPresented = isPresented
         self.adUnitID = adUnitID
         super.init()
+        
+        // set InterstitalAdView as the delegate for the ad
+        interstitialAd?.fullScreenContentDelegate = self
     }
  
     // creates a swiftUI view from a UIViewController
-    func makeUIViewController(context: Context) -> UIViewController {
+    func makeUIViewController(context: Context) -> some UIViewController {
         let view = UIViewController()
         
+        // wait 100 milliseconds and display the ad
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
             self.displayAd(from: view)
         }
@@ -37,14 +41,26 @@ final class InterstitialAdView: NSObject, UIViewControllerRepresentable, GADFull
         if let ad = interstitialAd {
             ad.present(fromRootViewController: root)
         } else {
-            print("G - Ad is loading")
+            print("G - Ad is not loaded")
             self.isPresented.toggle()
         }
     }
+
+    /// Tells the delegate that the ad failed to present full screen content.
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("Ad test - Ad did fail to present full screen content.")
+    }
     
+    /// Tells the delegate that the ad will present full screen content.
+    func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad test - Ad will present full screen content")
+    }
+    
+    /// Tells the delegate that the ad dismissed full screen content.
+
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        InterstitialAd.shared.load(withAdUnitID: self.adUnitID)
-        
+        print("Ad test - Ad did dismiss full screen content")
+        InterstitialAd.shared.load(withAdUnitID: adUnitID)
         isPresented.toggle()
     }
 }

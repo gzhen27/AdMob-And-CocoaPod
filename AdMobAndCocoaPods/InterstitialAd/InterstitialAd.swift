@@ -15,6 +15,7 @@ class InterstitialAd: NSObject {
     
     func load(withAdUnitID id: String) {
         let req = GADRequest()
+        req.scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         GADInterstitialAd.load(withAdUnitID: id, request: req) { ad, err in
             if let err = err {
                 print("Failed to load interstitial ad with error: \(err.localizedDescription)")
