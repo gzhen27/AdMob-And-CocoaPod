@@ -1,5 +1,5 @@
 //
-//  InterstitialAdView.swift
+//  RewardedAdView.swift
 //  AdMobAndCocoaPods
 //
 //  Created by G Zhen on 8/19/22.
@@ -8,27 +8,27 @@
 import SwiftUI
 import GoogleMobileAds
 
-final class InterstitialAdView: NSObject, UIViewControllerRepresentable, GADFullScreenContentDelegate {
-    let interstitialAd = InterstitialAd.shared.interstitialAd
+final class RewardedAdView: NSObject, UIViewControllerRepresentable, GADFullScreenContentDelegate {
+    let rewardedAd = RewardedAd.shared.rewardedAd
     
     @Binding var isPresented: Bool
-    var adUnitID: String
+    let adUnitID: String
+    let rewardFunc: () -> Void
     
-    init(isPresented: Binding<Bool>, adUnitID: String) {
+    init(isPresented: Binding<Bool>, adUnitID: String, rewardFunc: @escaping () -> Void) {
         self._isPresented = isPresented
         self.adUnitID = adUnitID
+        self.rewardFunc = rewardFunc
         
         super.init()
         
-        // set InterstitalAdView as the delegate for the ad
-        interstitialAd?.fullScreenContentDelegate = self
+        // set RewardedAdView as the delegate for the ad
+        rewardedAd?.fullScreenContentDelegate = self
     }
- 
-    // creates a swiftUI view from a UIViewController
+    
     func makeUIViewController(context: Context) -> some UIViewController {
         let vc = UIViewController()
         
-        // wait 100 milliseconds and display the ad
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(100)) {
             self.displayAd(from: vc)
         }
@@ -39,13 +39,16 @@ final class InterstitialAdView: NSObject, UIViewControllerRepresentable, GADFull
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {}
     
     private func displayAd(from root: UIViewController) {
-        if let ad = interstitialAd {
-            ad.present(fromRootViewController: root)
+        if let ad = rewardedAd {
+            ad.present(fromRootViewController: root) {
+                // calls reward function here
+            }
         } else {
-            print("G - Interstitial Ad is not loaded")
+            print("G - Rewarded Ad is not loaded")
             self.isPresented.toggle()
         }
     }
+    
 
     /// Tells the delegate that the ad failed to present full screen content.
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
@@ -61,7 +64,7 @@ final class InterstitialAdView: NSObject, UIViewControllerRepresentable, GADFull
 
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
         print("Ad test - Ad did dismiss full screen content")
-        InterstitialAd.shared.load(withAdUnitID: adUnitID)
+        RewardedAd.shared.load(withAdUnitID: adUnitID)
         isPresented.toggle()
     }
 }

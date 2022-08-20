@@ -19,6 +19,7 @@
 		EBB7128728B032EF008129FC /* InterstitialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7128628B032EF008129FC /* InterstitialAdView.swift */; };
 		EBB7128928B03F22008129FC /* FullScreenAdModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7128828B03F22008129FC /* FullScreenAdModifier.swift */; };
 		EBB7128D28B0566D008129FC /* RewardedAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7128C28B0566D008129FC /* RewardedAd.swift */; };
+		EBB7128F28B05851008129FC /* RewardedAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB7128E28B05851008129FC /* RewardedAdView.swift */; };
 		EBDFFFDB28ADADC40061D342 /* DeviceTypeAndOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFFFDA28ADADC40061D342 /* DeviceTypeAndOrientation.swift */; };
 		EBDFFFDD28ADC0000061D342 /* AdsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBDFFFDC28ADC0000061D342 /* AdsHelper.swift */; };
 		F21C75B2AE9DB69FDC257752 /* Pods_AdMobAndCocoaPods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB77568377F1F2912D54192 /* Pods_AdMobAndCocoaPods.framework */; };
@@ -42,6 +43,7 @@
 		EBB7128628B032EF008129FC /* InterstitialAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdView.swift; sourceTree = "<group>"; };
 		EBB7128828B03F22008129FC /* FullScreenAdModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenAdModifier.swift; sourceTree = "<group>"; };
 		EBB7128C28B0566D008129FC /* RewardedAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAd.swift; sourceTree = "<group>"; };
+		EBB7128E28B05851008129FC /* RewardedAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdView.swift; sourceTree = "<group>"; };
 		EBDFFFDA28ADADC40061D342 /* DeviceTypeAndOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTypeAndOrientation.swift; sourceTree = "<group>"; };
 		EBDFFFDC28ADC0000061D342 /* AdsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,15 +98,15 @@
 		EBA9963F28ABE4D600745292 /* AdMobAndCocoaPods */ = {
 			isa = PBXGroup;
 			children = (
-				EBB7128B28B05655008129FC /* RewardedAd */,
-				EBB7128A28B04C99008129FC /* Helpers */,
 				EBA9964028ABE4D600745292 /* AdMobAndCocoaPodsApp.swift */,
 				EBA9964428ABE4DD00745292 /* Assets.xcassets */,
 				EBB7128228B01656008129FC /* BannerAd */,
 				EBA9964228ABE4D600745292 /* ContentView.swift */,
+				EBB7128A28B04C99008129FC /* Helpers */,
 				EBA9964E28ABE9EA00745292 /* Info.plist */,
 				EBB7128328B017B5008129FC /* InterstitialAd */,
 				EBA9964628ABE4DD00745292 /* Preview Content */,
+				EBB7128B28B05655008129FC /* RewardedAd */,
 			);
 			path = AdMobAndCocoaPods;
 			sourceTree = "<group>";
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB7128C28B0566D008129FC /* RewardedAd.swift */,
+				EBB7128E28B05851008129FC /* RewardedAdView.swift */,
 			);
 			path = RewardedAd;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				EBA9965428AC499400745292 /* BannerAdView.swift in Sources */,
 				EBB7128D28B0566D008129FC /* RewardedAd.swift in Sources */,
 				EBDFFFDD28ADC0000061D342 /* AdsHelper.swift in Sources */,
+				EBB7128F28B05851008129FC /* RewardedAdView.swift in Sources */,
 				EBA9965028AC09F200745292 /* AppTrackingManager.swift in Sources */,
 				EBB7128528B017CB008129FC /* InterstitialAd.swift in Sources */,
 				EBA9965228AC447900745292 /* BannerAdViewController.swift in Sources */,
