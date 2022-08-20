@@ -13,9 +13,9 @@ final class RewardedAdView: NSObject, UIViewControllerRepresentable, GADFullScre
     
     @Binding var isPresented: Bool
     let adUnitID: String
-    let rewardFunc: () -> Void
+    let rewardFunc: (() -> Void)?
     
-    init(isPresented: Binding<Bool>, adUnitID: String, rewardFunc: @escaping () -> Void) {
+    init(isPresented: Binding<Bool>, adUnitID: String, rewardFunc: (() -> Void)?) {
         self._isPresented = isPresented
         self.adUnitID = adUnitID
         self.rewardFunc = rewardFunc
@@ -40,8 +40,12 @@ final class RewardedAdView: NSObject, UIViewControllerRepresentable, GADFullScre
     
     private func displayAd(from root: UIViewController) {
         if let ad = rewardedAd {
-            ad.present(fromRootViewController: root) {
-                // calls reward function here
+            ad.present(fromRootViewController: root) { [weak self] in
+                if let rewardFunc = self?.rewardFunc {
+                    rewardFunc()
+                } else {
+                    print("Failed to get rewards.")
+                }
             }
         } else {
             print("G - Rewarded Ad is not loaded")
@@ -52,18 +56,18 @@ final class RewardedAdView: NSObject, UIViewControllerRepresentable, GADFullScre
 
     /// Tells the delegate that the ad failed to present full screen content.
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
-        print("Ad test - Ad did fail to present full screen content.")
+        print("Ad test - Rewarded Ad did fail to present full screen content.")
     }
     
     /// Tells the delegate that the ad will present full screen content.
     func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        print("Ad test - Ad will present full screen content")
+        print("Ad test - Rewarded Ad will present full screen content")
     }
     
     /// Tells the delegate that the ad dismissed full screen content.
 
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        print("Ad test - Ad did dismiss full screen content")
+        print("Ad test - Rewarded Ad did dismiss full screen content")
         RewardedAd.shared.load(withAdUnitID: adUnitID)
         isPresented.toggle()
     }

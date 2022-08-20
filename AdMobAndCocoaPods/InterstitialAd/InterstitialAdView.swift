@@ -12,7 +12,7 @@ final class InterstitialAdView: NSObject, UIViewControllerRepresentable, GADFull
     let interstitialAd = InterstitialAd.shared.interstitialAd
     
     @Binding var isPresented: Bool
-    var adUnitID: String
+    let adUnitID: String
     
     init(isPresented: Binding<Bool>, adUnitID: String) {
         self._isPresented = isPresented
@@ -42,25 +42,25 @@ final class InterstitialAdView: NSObject, UIViewControllerRepresentable, GADFull
         if let ad = interstitialAd {
             ad.present(fromRootViewController: root)
         } else {
-            print("G - Interstitial Ad is not loaded")
+            print("Ad test - Interstitial Ad is not loaded")
             self.isPresented.toggle()
         }
     }
 
     /// Tells the delegate that the ad failed to present full screen content.
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
-        print("Ad test - Ad did fail to present full screen content.")
+        print("Ad test - Interstitial Ad did fail to present full screen content.")
     }
     
     /// Tells the delegate that the ad will present full screen content.
     func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        print("Ad test - Ad will present full screen content")
+        print("Ad test - Interstitial Ad will present full screen content")
     }
     
     /// Tells the delegate that the ad dismissed full screen content.
 
     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        print("Ad test - Ad did dismiss full screen content")
+        print("Ad test - Interstitial Ad did dismiss full screen content")
         InterstitialAd.shared.load(withAdUnitID: adUnitID)
         isPresented.toggle()
     }
