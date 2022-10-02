@@ -9,7 +9,7 @@ import SwiftUI
 
 // conforms the BannerAdView to UIViewControllerRepresentable,
 // which to create and manage a UIViewController object in SwiftUI interface.
-final class BannerAdView: UIViewControllerRepresentable {
+struct BannerAdView: UIViewControllerRepresentable {
     let adUnitID: String
     
     init(adUnitID: String) {
